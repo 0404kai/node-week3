@@ -1,3 +1,4 @@
+const http = require('http');
 const path = require('path');
 const cors = require('cors');
 const express = require('express');
@@ -43,4 +44,5 @@ app.use((err, req, res, next) =>{
   });
 });
 
-app.listen(process.env.PORT)
+const server = http.createServer(app);
+server.listen(process.env.PORT || 8080)
