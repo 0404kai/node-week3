@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const Post = require('../models/posts');
 const {success, error}  = require('../statusCode/statusHandle')
 
@@ -32,7 +32,7 @@ router
       message: '刪除成功！'
   });
 })
-.delete('/:id',async(req, res, next)=>{
+.delete('/:id', async(req, res, next)=>{
   try{
     const id = req.params.id;
     await Post.findByIdAndDelete(id);

@@ -1,4 +1,4 @@
-var express = require('express');
+const express = require('express');
 const Post = require('../models/posts');
 
 const success = (res, post) =>{
